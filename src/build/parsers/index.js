@@ -4,6 +4,7 @@ import parseRequirables from './parseRequirables';
 import parseTemplates from './parseTemplates';
 import parseListingMetas from './parseListingMetas';
 import parseSnippets from './parseSnippets';
+import parseImages from './parseImages';
 
 export {
   parseQueries,
@@ -11,5 +12,6 @@ export {
   parseRequirables,
   parseTemplates,
   parseListingMetas,
+  parseImages,
   parseSnippets
 };

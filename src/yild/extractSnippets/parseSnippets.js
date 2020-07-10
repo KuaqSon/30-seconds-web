@@ -154,14 +154,7 @@ export const getGitMetadata = async(snippet, snippetsPath) => {
  * Gets the tag array for a snippet from the tags string.
  * @param {string} tagStr - The string of comma-separated tags for the snippet.
  */
-export const getTags = tagStr =>
-  tagStr
-    .split(',')
-    .reduce((acc, t) => {
-      const _t = t.trim().toLowerCase();
-      if(!acc.includes(_t)) acc.push(_t);
-      return acc;
-    }, []);
+export const getTags = tagStr => [...new Set(tagStr.split(','))];
 
 /**
  * Gets the snippet id from the snippet's filename.
